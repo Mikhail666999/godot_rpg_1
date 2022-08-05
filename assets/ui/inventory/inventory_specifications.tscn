@@ -1,0 +1,276 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/ui/style/ui_inventory.stylebox" type="StyleBox" id=1]
+[ext_resource path="res://assets/ui/fonts/3/2091230.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/ui/inventory/inventory_specifications.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 13
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="inventory_specifications" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.00909091
+anchor_top = 0.00923077
+anchor_right = 0.265455
+anchor_bottom = 0.498462
+custom_styles/panel = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+anchor_top = 0.0157233
+anchor_right = 0.778302
+anchor_bottom = 0.977987
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="space" type="Label" parent="Panel/HBoxContainer"]
+margin_top = 143.0
+margin_right = 9.0
+margin_bottom = 161.0
+text = "   "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer"]
+margin_left = 13.0
+margin_right = 164.0
+margin_bottom = 305.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="level" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_right = 151.0
+margin_bottom = 18.0
+
+[node name="space" type="Label" parent="Panel/HBoxContainer/VBoxContainer/level"]
+margin_right = 105.0
+margin_bottom = 18.0
+text = "                                   "
+
+[node name="level" type="Label" parent="Panel/HBoxContainer/VBoxContainer/level"]
+margin_left = 109.0
+margin_right = 147.0
+margin_bottom = 18.0
+text = "Level: "
+align = 2
+
+[node name="level_player" type="Label" parent="Panel/HBoxContainer/VBoxContainer/level"]
+margin_left = 151.0
+margin_right = 151.0
+margin_bottom = 18.0
+
+[node name="name" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_top = 22.0
+margin_right = 151.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/name"]
+margin_right = 41.0
+margin_bottom = 18.0
+text = "Name: "
+
+[node name="name_player" type="Label" parent="Panel/HBoxContainer/VBoxContainer/name"]
+margin_left = 45.0
+margin_right = 86.0
+margin_bottom = 18.0
+text = "Yargus"
+
+[node name="class" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_top = 44.0
+margin_right = 151.0
+margin_bottom = 62.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/class"]
+margin_right = 37.0
+margin_bottom = 18.0
+text = "Class: "
+
+[node name="class_player" type="Label" parent="Panel/HBoxContainer/VBoxContainer/class"]
+margin_left = 41.0
+margin_right = 41.0
+margin_bottom = 18.0
+
+[node name="___" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_top = 66.0
+margin_right = 151.0
+margin_bottom = 84.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/___"]
+margin_bottom = 18.0
+
+[node name="class" type="Label" parent="Panel/HBoxContainer/VBoxContainer/___"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 18.0
+
+[node name="health" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_top = 88.0
+margin_right = 151.0
+margin_bottom = 106.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/health"]
+margin_right = 46.0
+margin_bottom = 18.0
+text = "Health: "
+
+[node name="health_player" type="Label" parent="Panel/HBoxContainer/VBoxContainer/health"]
+margin_left = 50.0
+margin_right = 50.0
+margin_bottom = 18.0
+
+[node name="magic" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_top = 110.0
+margin_right = 151.0
+margin_bottom = 128.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/magic"]
+margin_right = 42.0
+margin_bottom = 18.0
+text = "Magic: "
+
+[node name="magic_player" type="Label" parent="Panel/HBoxContainer/VBoxContainer/magic"]
+margin_left = 46.0
+margin_right = 46.0
+margin_bottom = 18.0
+
+[node name="satiety" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_top = 132.0
+margin_right = 151.0
+margin_bottom = 150.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/satiety"]
+margin_right = 49.0
+margin_bottom = 18.0
+text = "Satiety: "
+
+[node name="satiety_player" type="Label" parent="Panel/HBoxContainer/VBoxContainer/satiety"]
+margin_left = 53.0
+margin_right = 53.0
+margin_bottom = 18.0
+
+[node name="vigor" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_top = 154.0
+margin_right = 151.0
+margin_bottom = 172.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/vigor"]
+margin_right = 38.0
+margin_bottom = 18.0
+text = "Vigor: "
+
+[node name="vigor_player" type="Label" parent="Panel/HBoxContainer/VBoxContainer/vigor"]
+margin_left = 42.0
+margin_right = 42.0
+margin_bottom = 18.0
+
+[node name="___2" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_top = 176.0
+margin_right = 151.0
+margin_bottom = 194.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/___2"]
+margin_bottom = 18.0
+
+[node name="class" type="Label" parent="Panel/HBoxContainer/VBoxContainer/___2"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 18.0
+
+[node name="power" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_top = 198.0
+margin_right = 151.0
+margin_bottom = 216.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/power"]
+margin_right = 44.0
+margin_bottom = 18.0
+text = "Power: "
+
+[node name="power_player" type="Label" parent="Panel/HBoxContainer/VBoxContainer/power"]
+margin_left = 48.0
+margin_right = 48.0
+margin_bottom = 18.0
+
+[node name="dexterity" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_top = 220.0
+margin_right = 151.0
+margin_bottom = 238.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/dexterity"]
+margin_right = 61.0
+margin_bottom = 18.0
+text = "Dexterity: "
+
+[node name="dexterity_player" type="Label" parent="Panel/HBoxContainer/VBoxContainer/dexterity"]
+margin_left = 65.0
+margin_right = 65.0
+margin_bottom = 18.0
+
+[node name="endurance" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_top = 242.0
+margin_right = 151.0
+margin_bottom = 260.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/endurance"]
+margin_right = 72.0
+margin_bottom = 18.0
+text = "Endurance: "
+
+[node name="endurance_player" type="Label" parent="Panel/HBoxContainer/VBoxContainer/endurance"]
+margin_left = 76.0
+margin_right = 76.0
+margin_bottom = 18.0
+
+[node name="mind" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_top = 264.0
+margin_right = 151.0
+margin_bottom = 282.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/mind"]
+margin_right = 36.0
+margin_bottom = 18.0
+text = "Mind: "
+
+[node name="mind_player" type="Label" parent="Panel/HBoxContainer/VBoxContainer/mind"]
+margin_left = 40.0
+margin_right = 40.0
+margin_bottom = 18.0
+
+[node name="oratory" type="HBoxContainer" parent="Panel/HBoxContainer/VBoxContainer"]
+margin_top = 286.0
+margin_right = 151.0
+margin_bottom = 304.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer/oratory"]
+margin_right = 52.0
+margin_bottom = 18.0
+text = "Oratory: "
+
+[node name="oratory_player" type="Label" parent="Panel/HBoxContainer/VBoxContainer/oratory"]
+margin_left = 56.0
+margin_right = 56.0
+margin_bottom = 18.0
+
+[node name="HScrollBar" type="HScrollBar" parent="Panel"]
+visible = false
+anchor_left = 0.971698
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": true
+}

@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/ui/menu/main_menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/ui/themes/1.theme" type="Theme" id=2]
+
+[node name="main_menu" type="Control"]
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 748.0
+margin_top = 430.0
+margin_right = 1051.0
+margin_bottom = 619.0
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="start" type="Button" parent="VBoxContainer"]
+margin_right = 303.0
+margin_bottom = 44.0
+text = "Start"
+
+[node name="settings" type="Button" parent="VBoxContainer"]
+margin_top = 48.0
+margin_right = 303.0
+margin_bottom = 92.0
+disabled = true
+text = "Settings"
+
+[node name="exit" type="Button" parent="VBoxContainer"]
+margin_top = 96.0
+margin_right = 303.0
+margin_bottom = 140.0
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]

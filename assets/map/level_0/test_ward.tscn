@@ -1,0 +1,106 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/obj/images/test_texture.tres" type="Material" id=2]
+[ext_resource path="res://assets/map/level_0/test_ward.gd" type="Script" id=3]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 5, 0.1, 5 )
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( -2.5, 0.05, 2.5, 2.5, 0.05, 2.5, -2.5, -0.05, 2.5, 2.5, 0.05, 2.5, 2.5, -0.05, 2.5, -2.5, -0.05, 2.5, 2.5, 0.05, -2.5, -2.5, 0.05, -2.5, 2.5, -0.05, -2.5, -2.5, 0.05, -2.5, -2.5, -0.05, -2.5, 2.5, -0.05, -2.5, 2.5, 0.05, 2.5, 2.5, 0.05, -2.5, 2.5, -0.05, 2.5, 2.5, 0.05, -2.5, 2.5, -0.05, -2.5, 2.5, -0.05, 2.5, -2.5, 0.05, -2.5, -2.5, 0.05, 2.5, -2.5, -0.05, -2.5, -2.5, 0.05, 2.5, -2.5, -0.05, 2.5, -2.5, -0.05, -2.5, 2.5, 0.05, 2.5, -2.5, 0.05, 2.5, 2.5, 0.05, -2.5, -2.5, 0.05, 2.5, -2.5, 0.05, -2.5, 2.5, 0.05, -2.5, -2.5, -0.05, 2.5, 2.5, -0.05, 2.5, -2.5, -0.05, -2.5, 2.5, -0.05, 2.5, 2.5, -0.05, -2.5, -2.5, -0.05, -2.5 )
+
+[sub_resource type="ConcavePolygonShape" id=3]
+data = PoolVector3Array( -2.5, 0.05, 2.5, 2.5, 0.05, 2.5, -2.5, -0.05, 2.5, 2.5, 0.05, 2.5, 2.5, -0.05, 2.5, -2.5, -0.05, 2.5, 2.5, 0.05, -2.5, -2.5, 0.05, -2.5, 2.5, -0.05, -2.5, -2.5, 0.05, -2.5, -2.5, -0.05, -2.5, 2.5, -0.05, -2.5, 2.5, 0.05, 2.5, 2.5, 0.05, -2.5, 2.5, -0.05, 2.5, 2.5, 0.05, -2.5, 2.5, -0.05, -2.5, 2.5, -0.05, 2.5, -2.5, 0.05, -2.5, -2.5, 0.05, 2.5, -2.5, -0.05, -2.5, -2.5, 0.05, 2.5, -2.5, -0.05, 2.5, -2.5, -0.05, -2.5, 2.5, 0.05, 2.5, -2.5, 0.05, 2.5, 2.5, 0.05, -2.5, -2.5, 0.05, 2.5, -2.5, 0.05, -2.5, 2.5, 0.05, -2.5, -2.5, -0.05, 2.5, 2.5, -0.05, 2.5, -2.5, -0.05, -2.5, 2.5, -0.05, 2.5, 2.5, -0.05, -2.5, -2.5, -0.05, -2.5 )
+
+[sub_resource type="ConcavePolygonShape" id=4]
+data = PoolVector3Array( -2.5, 0.05, 2.5, 2.5, 0.05, 2.5, -2.5, -0.05, 2.5, 2.5, 0.05, 2.5, 2.5, -0.05, 2.5, -2.5, -0.05, 2.5, 2.5, 0.05, -2.5, -2.5, 0.05, -2.5, 2.5, -0.05, -2.5, -2.5, 0.05, -2.5, -2.5, -0.05, -2.5, 2.5, -0.05, -2.5, 2.5, 0.05, 2.5, 2.5, 0.05, -2.5, 2.5, -0.05, 2.5, 2.5, 0.05, -2.5, 2.5, -0.05, -2.5, 2.5, -0.05, 2.5, -2.5, 0.05, -2.5, -2.5, 0.05, 2.5, -2.5, -0.05, -2.5, -2.5, 0.05, 2.5, -2.5, -0.05, 2.5, -2.5, -0.05, -2.5, 2.5, 0.05, 2.5, -2.5, 0.05, 2.5, 2.5, 0.05, -2.5, -2.5, 0.05, 2.5, -2.5, 0.05, -2.5, 2.5, 0.05, -2.5, -2.5, -0.05, 2.5, 2.5, -0.05, 2.5, -2.5, -0.05, -2.5, 2.5, -0.05, 2.5, 2.5, -0.05, -2.5, -2.5, -0.05, -2.5 )
+
+[sub_resource type="ConcavePolygonShape" id=5]
+data = PoolVector3Array( -2.5, 0.05, 2.5, 2.5, 0.05, 2.5, -2.5, -0.05, 2.5, 2.5, 0.05, 2.5, 2.5, -0.05, 2.5, -2.5, -0.05, 2.5, 2.5, 0.05, -2.5, -2.5, 0.05, -2.5, 2.5, -0.05, -2.5, -2.5, 0.05, -2.5, -2.5, -0.05, -2.5, 2.5, -0.05, -2.5, 2.5, 0.05, 2.5, 2.5, 0.05, -2.5, 2.5, -0.05, 2.5, 2.5, 0.05, -2.5, 2.5, -0.05, -2.5, 2.5, -0.05, 2.5, -2.5, 0.05, -2.5, -2.5, 0.05, 2.5, -2.5, -0.05, -2.5, -2.5, 0.05, 2.5, -2.5, -0.05, 2.5, -2.5, -0.05, -2.5, 2.5, 0.05, 2.5, -2.5, 0.05, 2.5, 2.5, 0.05, -2.5, -2.5, 0.05, 2.5, -2.5, 0.05, -2.5, 2.5, 0.05, -2.5, -2.5, -0.05, 2.5, 2.5, -0.05, 2.5, -2.5, -0.05, -2.5, 2.5, -0.05, 2.5, 2.5, -0.05, -2.5, -2.5, -0.05, -2.5 )
+
+[sub_resource type="ConcavePolygonShape" id=6]
+data = PoolVector3Array( -2.5, 0.05, 2.5, 2.5, 0.05, 2.5, -2.5, -0.05, 2.5, 2.5, 0.05, 2.5, 2.5, -0.05, 2.5, -2.5, -0.05, 2.5, 2.5, 0.05, -2.5, -2.5, 0.05, -2.5, 2.5, -0.05, -2.5, -2.5, 0.05, -2.5, -2.5, -0.05, -2.5, 2.5, -0.05, -2.5, 2.5, 0.05, 2.5, 2.5, 0.05, -2.5, 2.5, -0.05, 2.5, 2.5, 0.05, -2.5, 2.5, -0.05, -2.5, 2.5, -0.05, 2.5, -2.5, 0.05, -2.5, -2.5, 0.05, 2.5, -2.5, -0.05, -2.5, -2.5, 0.05, 2.5, -2.5, -0.05, 2.5, -2.5, -0.05, -2.5, 2.5, 0.05, 2.5, -2.5, 0.05, 2.5, 2.5, 0.05, -2.5, -2.5, 0.05, 2.5, -2.5, 0.05, -2.5, 2.5, 0.05, -2.5, -2.5, -0.05, 2.5, 2.5, -0.05, 2.5, -2.5, -0.05, -2.5, 2.5, -0.05, 2.5, 2.5, -0.05, -2.5, -2.5, -0.05, -2.5 )
+
+[sub_resource type="ConcavePolygonShape" id=7]
+data = PoolVector3Array( -2.5, 0.05, 2.5, 2.5, 0.05, 2.5, -2.5, -0.05, 2.5, 2.5, 0.05, 2.5, 2.5, -0.05, 2.5, -2.5, -0.05, 2.5, 2.5, 0.05, -2.5, -2.5, 0.05, -2.5, 2.5, -0.05, -2.5, -2.5, 0.05, -2.5, -2.5, -0.05, -2.5, 2.5, -0.05, -2.5, 2.5, 0.05, 2.5, 2.5, 0.05, -2.5, 2.5, -0.05, 2.5, 2.5, 0.05, -2.5, 2.5, -0.05, -2.5, 2.5, -0.05, 2.5, -2.5, 0.05, -2.5, -2.5, 0.05, 2.5, -2.5, -0.05, -2.5, -2.5, 0.05, 2.5, -2.5, -0.05, 2.5, -2.5, -0.05, -2.5, 2.5, 0.05, 2.5, -2.5, 0.05, 2.5, 2.5, 0.05, -2.5, -2.5, 0.05, 2.5, -2.5, 0.05, -2.5, 2.5, 0.05, -2.5, -2.5, -0.05, 2.5, 2.5, -0.05, 2.5, -2.5, -0.05, -2.5, 2.5, -0.05, 2.5, 2.5, -0.05, -2.5, -2.5, -0.05, -2.5 )
+
+[node name="test_ward" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="obj" type="Spatial" parent="."]
+
+[node name="ward" type="Spatial" parent="obj"]
+transform = Transform( 9.45295, 0, 0, 0, 9.45295, 0, 0, 0, 9.45295, 0, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="obj/ward"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.890803, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="obj/ward/MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="obj/ward/MeshInstance/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="obj/ward"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.96158, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="obj/ward/MeshInstance2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="obj/ward/MeshInstance2/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="obj/ward"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -2.41702, 1.49575, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="obj/ward/MeshInstance3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="obj/ward/MeshInstance3/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="obj/ward"]
+transform = Transform( 1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, -0.0877948, 1.49575, -2.54871 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="obj/ward/MeshInstance5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="obj/ward/MeshInstance5/StaticBody"]
+shape = SubResource( 5 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="obj/ward"]
+transform = Transform( 1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, -0.0877948, 1.49575, 2.47747 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="obj/ward/MeshInstance6"]
+
+[node name="CollisionShape" type="CollisionShape" parent="obj/ward/MeshInstance6/StaticBody"]
+shape = SubResource( 6 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="obj/ward"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 2.40739, 1.49575, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="obj/ward/MeshInstance4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="obj/ward/MeshInstance4/StaticBody"]
+shape = SubResource( 7 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.717883, 0, -0.696163, 0, 1, 0, 0.696163, 0, 0.717883, -20.887, -6.15617, 21.2149 )

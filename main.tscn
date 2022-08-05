@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+
+func _ready():
+	G.mouse_visible()
+	G.pause(false)
+	get_tree().change_scene(\"res://assets/ui/menu/main_menu.tscn\")
+#	get_tree().change_scene(\"res://assets/map/episode_1/1_prolog/city.tscn\")
+	G.game_in_player = \"res://assets/map/dungeon/assets/1/dungeon_1.tscn\"
+	print(G.game_in_player)
+"
+
+[node name="main" type="Node"]
+script = SubResource( 1 )

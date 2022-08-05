@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/dungeon.obj-389c34f190f8f4ab208b4608bf7ff25f.mesh"
+
+[deps]
+
+files=[ "res://.import/dungeon.obj-389c34f190f8f4ab208b4608bf7ff25f.mesh" ]
+
+source_file="res://assets/map/dungeon/assets/1/dungeon.obj"
+dest_files=[ "res://.import/dungeon.obj-389c34f190f8f4ab208b4608bf7ff25f.mesh", "res://.import/dungeon.obj-389c34f190f8f4ab208b4608bf7ff25f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
